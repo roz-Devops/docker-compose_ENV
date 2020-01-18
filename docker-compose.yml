@@ -1,0 +1,14 @@
+
+version: '3.1'
+services:
+  db:
+    container_name: Mongo-db
+    image: mongo:latest
+    restart: always
+    environment:
+      - GF_AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+      - GF_AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
+      - MY_MSG=${MSG}
+      - MY_OTHER_MSG=${OTHER_MSG}
+    ports:
+      - 27020:27017
