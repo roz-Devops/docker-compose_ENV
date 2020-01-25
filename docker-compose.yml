@@ -6,9 +6,7 @@ services:
     image: mongo:latest
     restart: always
     environment:
-      - GF_AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
-      - GF_AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
-      - MY_MSG=${MSG}
-      - MY_OTHER_MSG=${OTHER_MSG}
+      - DB_AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+      - DB_AWS_SECRET_KEY=${AWS_SECRET_ACCESS_KEY}
     ports:
       - 27020:27017
